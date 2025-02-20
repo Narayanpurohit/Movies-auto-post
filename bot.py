@@ -164,7 +164,8 @@ async def new_post(client, message):
             # Create WordPress post
             post_link = create_wordpress_post(movie_data["title"], post_content, poster_id, category, quality)
             
-            try post_link:
+            #try post_link:
+            try :
                 # Delete loading sticker
                 await loading_sticker.delete()
                 
