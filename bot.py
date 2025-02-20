@@ -164,14 +164,14 @@ async def new_post(client, message):
             # Create WordPress post
             post_link = create_wordpress_post(movie_data["title"], post_content, poster_id, category, quality)
             
-            if post_link:
+            try post_link:
                 # Delete loading sticker
                 await loading_sticker.delete()
                 
                 # Send post link to user
                 await message.reply_text(f"✅ Post created successfully!\n🔗 {post_link}")
-            else:
-                await message.reply_text("❌ Failed to create WordPress post.")
+            except Exception as e:
+                await message.reply_text("❌ Failed to create WordPress post.{str(e)}")
         else:
             await message.reply_text("❌ Failed to upload the poster to WordPress.")
     except Exception as e:
