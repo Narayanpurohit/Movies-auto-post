@@ -136,7 +136,7 @@ async def new_post(client, message):
                 )
         
         # Send loading sticker
-        loading_sticker = await message.reply_sticker("CAACAgIAAxkBAAIBOWY5j4j7vz7Vl3X8Z8Z8Z8Z8Z8Z8")  # Replace with your loading sticker ID
+        loading_sticker = await message.reply_sticker("CAACAgQAAxkBAAEKeqNlIpmeUoOEsEWOWEiPxPi3hH5q-QACbg8AAuHqsVDaMQeY6CcRojAE")  # Replace with your loading sticker ID
         
         # Scrape IMDb data
         movie_data = scrape_imdb_data(imdb_id)
